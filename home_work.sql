@@ -13,7 +13,9 @@ WHERE Notes LIKE '%University%';
 
 /*4) Выбрать все запись из таблицы Orders где значение поля OrderDate находитя в промежутке от 1996-07-04 до 1996-08-07 и ShipperID = 1 или 3*/
 SELECT * FROM Orders 
-WHERE OrderDate BETWEEN '1996-07-04' AND '1996-08-07'
+WHERE OrderDate BETWEEN '1996-07-04' AND '1996-08-07' AND ShipperID IN (1, 3)
+
+
 
 /*5) Узнать солько заказов было сделано для каждого города(city) из таблицы Customers.*/
 SELECT COUNT(CustomerID) AS NumberOfOrders, City
